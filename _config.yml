@@ -1,10 +1,10 @@
 # description
-name: "Title"
+name: "HashTabber"
 description: "Short description"
-author: "Name Surname"
+author: "Leszek Pietrzak"
 
 # address settings
-url: "http://0.0.0.0:4000"
+url: "http://hashtabber.smutnyleszek.com"
 permalink: /post/:title
 
 # site configuration
