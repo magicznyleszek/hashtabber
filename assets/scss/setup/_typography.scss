@@ -64,6 +64,10 @@ em {
     font-style: italic;
 }
 
+code {
+    font-family: $code;
+}
+
 small, sub, sup {
     font-size: 75%;
 }
