@@ -4,15 +4,15 @@ layout: default
 
 <p>Here are some tabs to navigate:</p>
 
-<section class="hashtabber">
-    <ol class="hashtabber-navigation">
+<section class="hashTabber">
+    <ol class="hashTabber-navigation">
         {% for dinosaur in site.data.dinosaurs %}
             <li>
                 <a href="#">{{ dinosaur.name }}</a>
             </li>
         {% endfor %}
     </ol><!--
- --><ol class="hashtabber-data">
+ --><ol class="hashTabber-data">
         {% for dinosaur in site.data.dinosaurs %}
             <li>
                 <p>{{ dinosaur.description }}</p>
@@ -24,13 +24,13 @@ layout: default
 
 <pre>
     <code lang="html">
-        &lt;section class="hashtabber"&gt;
-            &lt;ol class="hashtabber-navigation"&gt;
+        &lt;section class="hashTabber"&gt;
+            &lt;ol class="hashTabber-navigation"&gt;
                 &lt;li&gt;First item&lt;/li&gt;
                 &lt;li&gt;Second item&lt;/li&gt;
                 &lt;li&gt;Third item&lt;/li&gt;
             &lt;/ol&gt;
-            &lt;ol class="hashtabber-data"&gt;
+            &lt;ol class="hashTabber-data"&gt;
                 &lt;li&gt;This is the first item content.&lt;/li&gt;
                 &lt;li&gt;This is the second item content.&lt;/li&gt;
                 &lt;li&gt;This is the third item content.&lt;/li&gt;
