@@ -2,17 +2,41 @@
 layout: default
 ---
 
-<h1>Hello world!</h1>
+<h1>HashTabber</h1>
 
-<p>Here are some dinosaurs:</p>
+<p>Here are some tabs to navigate:</p>
 
-<ul>
-    {% for dinosaur in site.data.dinosaurs %}
-        <li>
-            <a href="{{ dinosaur.url }}" target="_blank">{{ dinosaur.name }}</a>
-            {% for category in dinosaur.categories %}
-                <a href="{{ site.url }}/category/{{ category }}">{{ category }}</a>
-            {% endfor %}
-        </li>
-    {% endfor %}
-</ul>
+<section class="hashtabber">
+    <ol class="hashtabber-navigation">
+        {% for dinosaur in site.data.dinosaurs %}
+            <li>
+                <a href="#">{{ dinosaur.name }}</a>
+            </li>
+        {% endfor %}
+    </ol><!--
+ --><ol class="hashtabber-data">
+        {% for dinosaur in site.data.dinosaurs %}
+            <li>
+                <p>{{ dinosaur.description }}</p>
+                <a href="{{ dinosaur.url }}" target="_blank">Read more about {{ dinosaur.name }}</a>
+            </li>
+        {% endfor %}
+    </ol>
+</section>
+
+<pre>
+    <code lang="html">
+        &lt;section class="hashtabber"&gt;
+            &lt;ol class="hashtabber-navigation"&gt;
+                &lt;li&gt;First item&lt;/li&gt;
+                &lt;li&gt;Second item&lt;/li&gt;
+                &lt;li&gt;Third item&lt;/li&gt;
+            &lt;/ol&gt;
+            &lt;ol class="hashtabber-data"&gt;
+                &lt;li&gt;This is the first item content.&lt;/li&gt;
+                &lt;li&gt;This is the second item content.&lt;/li&gt;
+                &lt;li&gt;This is the third item content.&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/section&gt;
+    </code>
+</pre>
