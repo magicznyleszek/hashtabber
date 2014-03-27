@@ -1,11 +1,11 @@
 /*
 Syntax error: Undefined mixin 'opacity'.
-        on line 25 of /Users/leszekpietrzak/github/hashtabber/assets/scss/libraries/hashTabber.scss, in `opacity'
-        from line 25 of /Users/leszekpietrzak/github/hashtabber/assets/scss/libraries/hashTabber.scss
+        on line 29 of /Users/leszekpietrzak/github/hashtabber/assets/scss/libraries/hashTabber.scss, in `opacity'
+        from line 29 of /Users/leszekpietrzak/github/hashtabber/assets/scss/libraries/hashTabber.scss
 
 Backtrace:
-/Users/leszekpietrzak/github/hashtabber/assets/scss/libraries/hashTabber.scss:25:in `opacity'
-/Users/leszekpietrzak/github/hashtabber/assets/scss/libraries/hashTabber.scss:25
+/Users/leszekpietrzak/github/hashtabber/assets/scss/libraries/hashTabber.scss:29:in `opacity'
+/Users/leszekpietrzak/github/hashtabber/assets/scss/libraries/hashTabber.scss:29
 /Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/perform.rb:253:in `visit_mixin'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
 /Library/Ruby/Gems/1.8/gems/sass-3.2.10/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
@@ -90,4 +90,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'opacity'.\A         on line 25 of /Users/leszekpietrzak/github/hashtabber/assets/scss/libraries/hashTabber.scss, in `opacity'\A         from line 25 of /Users/leszekpietrzak/github/hashtabber/assets/scss/libraries/hashTabber.scss"; }
+  content: "Syntax error: Undefined mixin 'opacity'.\A         on line 29 of /Users/leszekpietrzak/github/hashtabber/assets/scss/libraries/hashTabber.scss, in `opacity'\A         from line 29 of /Users/leszekpietrzak/github/hashtabber/assets/scss/libraries/hashTabber.scss"; }

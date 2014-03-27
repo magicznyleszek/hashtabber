@@ -2,20 +2,24 @@
 // for hashTabber to work
 
 .hashTabber {
-    
+
 }
 
-ol.hashTabber-navigation, ol.hashTabber-data {
+ol.hashTabber-nav, ol.hashTabber-data {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-ol.hashTabber-navigation {
+ol.hashTabber-nav {
     > li {
-        cursor: pointer;
-        &.active, &:hover {
+        &.active > a {
             
+        }
+        > a {
+            &:hover {
+                
+            }
         }
     }
 }

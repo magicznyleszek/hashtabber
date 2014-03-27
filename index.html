@@ -4,11 +4,11 @@ layout: default
 
 <p>Here are some tabs to navigate:</p>
 
-<section class="hashTabber">
-    <ol class="hashTabber-navigation">
+<section class="hashTabber" id="dinosaurs">
+    <ol class="hashTabber-nav">
         {% for dinosaur in site.data.dinosaurs %}
             <li>
-                <a href="#">{{ dinosaur.name }}</a>
+                <a>{{ dinosaur.name }}</a>
             </li>
         {% endfor %}
     </ol><!--
@@ -22,10 +22,31 @@ layout: default
     </ol>
 </section>
 
+<p>Here are some more tabs to navigate:</p>
+
+<section class="hashTabber" id="philosophers">
+    <ol class="hashTabber-nav">
+        <h2>Philosophers:</h2>
+        {% for philosopher in site.data.philosophers %}
+            <li>
+                <a>{{ philosopher.name }}</a>
+            </li>
+        {% endfor %}
+    </ol><!--
+ --><ol class="hashTabber-data">
+        {% for philosopher in site.data.philosophers %}
+            <li>
+                <p>{{ philosopher.description }}</p>
+                <a href="{{ philosopher.url }}" target="_blank">Read more about {{ philosopher.name }}</a>
+            </li>
+        {% endfor %}
+    </ol>
+</section>
+
 <pre>
     <code lang="html">
-        &lt;section class="hashTabber"&gt;
-            &lt;ol class="hashTabber-navigation"&gt;
+        &lt;section class="hashTabber" id="distinct-name" &gt;
+            &lt;ol class="hashTabber-nav"&gt;
                 &lt;li&gt;First item&lt;/li&gt;
                 &lt;li&gt;Second item&lt;/li&gt;
                 &lt;li&gt;Third item&lt;/li&gt;
