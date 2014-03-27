@@ -1,0 +1,112 @@
+html {
+    font: 400 #{$font-size}/1.333 $source;
+    @media screen and (min-width: #{$break-big}) {
+        font-size: floor($font-size * $scale-fraction-inverse);
+    }
+}
+
+a {
+    color: $crimson;
+    outline: none;
+    text-decoration: underline;
+    &:visited {
+        color: $violet;
+    }
+    &:hover {
+        color: $cardinal;
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    
+}
+
+h1 {
+    font-size: rem(40px);
+}
+
+h2 {
+    font-size: rem(20px);
+}
+
+p {
+
+}
+
+blockquote {
+    
+}
+
+ul, ol {
+    margin-left: 1.777rem;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+nav ul, nav ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+small, sub, sup {
+    font-size: 75%;
+}
+
+sub, sup {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+hr {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $black;
+}
+
+:focus {
+    outline: none;
+}
+::-moz-focus-inner {
+    border: 0;
+}
+img, embed, object, video {
+    max-width: 100%;
+}
+::selection {
+    color: $white;
+    background-color: $crimson;
+}
+::-moz-selection {
+    color: $white;
+    background-color: $crimson;
+}

@@ -1,0 +1,22 @@
+// Start with defining colors,
+// go with the default typography, 
+// and only then build up the rest.
+
+// scss libraries
+// --------------
+@import "compass/reset";
+@import "compass/css3";
+
+// base setup
+// ----------
+@import "setup/variables";
+@import "setup/mixins";
+@import "setup/columns";
+@import "setup/typography";
+
+// layout
+// ------
+@import "layout/base";
+@import "layout/header";
+@import "layout/content";
+@import "layout/footer";

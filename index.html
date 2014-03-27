@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<h1>Hello world!</h1>
+
+<p>Here are some dinosaurs:</p>
+
+<ul>
+    {% for dinosaur in site.data.dinosaurs %}
+        <li>
+            <a href="{{ dinosaur.url }}" target="_blank">{{ dinosaur.name }}</a>
+            {% for category in dinosaur.categories %}
+                <a href="{{ site.url }}/category/{{ category }}">{{ category }}</a>
+            {% endfor %}
+        </li>
+    {% endfor %}
+</ul>
+
+<p>Here are some posts:</p>
+
+<ul>
+    {% for post in site.posts %}
+        <li>
+            {% include post-summary.liquid %}
+        </li>
+    {% endfor %}
+</ul>
+
+{% include form-sample.liquid %}

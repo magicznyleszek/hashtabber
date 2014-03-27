@@ -1,0 +1,14 @@
+# description
+name: "Title"
+description: "Short description"
+author: "Name Surname"
+
+# address settings
+url: "http://0.0.0.0:4000"
+permalink: /post/:title
+
+# site configuration
+encoding: UTF-8
+markdown: rdiscount
+future: true
+paginate: 9000

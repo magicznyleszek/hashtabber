@@ -1,0 +1,20 @@
+## TEAM
+
+Your title: Name Surname
+Site: url
+Email: email
+Location: city, country
+
+## THANKS
+
+Dave Gandy: fontawesome.io
+Christopher Eppstein: compass-style.org
+Faruk Ateş: modernizr.com
+John Resig: jquery.com
+Name: url/email
+
+## SITE
+
+Last update: YYYY/MM/DD
+Language: Polish, English
+Software: Sublime Text 2, Adobe Illustrator

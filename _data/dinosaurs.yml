@@ -1,0 +1,11 @@
+- name: Trilobite
+  url: http://en.wikipedia.org/wiki/Trilobite
+  categories: [sea, swimming]
+
+- name: Velociraptor
+  url: http://en.wikipedia.org/wiki/Velociraptor
+  categories: [land, running]
+
+- name: Pterodactylus
+  url: http://en.wikipedia.org/wiki/Pterodactylus
+  categories: [land, flying]

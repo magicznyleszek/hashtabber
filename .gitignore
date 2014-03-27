@@ -1,1 +1,9 @@
+## Jekyll site output
+_site
+
+## ignore compass cache and generated css
 .sass-cache
+assets/css/*
+
+## please do
+.wild-trilobites

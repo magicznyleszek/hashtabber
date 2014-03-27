@@ -1,0 +1,35 @@
+// modular scale
+// -------------
+$scale-main: 16;
+$scale-secondary: 20;
+$scale-fraction: 1/2;
+$scale-fraction-inverse: 1/$scale-fraction;
+// 4, 5, 8, 10, 16, 20, 32, 40, 64, 80, 128, 160, 256, 320, 512, 640, 1024, 1280, 2048, 2560
+
+// default settings
+// ----------------
+$font-size: 16px;
+$break-big: 960px;
+$break-small: 480px;
+
+// colors
+// ------
+$black: rgb(0,0,0);
+$white: rgb(255,255,255);
+
+$violet: rgb(100,40,140);
+$cardinal: rgb(170,30,100);
+$crimson: rgb(240,20,60);
+$boulder-darker: rgb(32,20,20);
+$boulder-dark: rgb(77,67,67);
+$boulder: rgb(121,114,114);
+$boulder-light: rgb(166,161,161);
+$boulder-lighter: rgb(210,208,208);
+
+// fonts
+// -----
+$source: "Source Sans Pro", sans-serif;
+
+// images
+// ------
+$background-pattern: url("../img/background-pattern.png");
