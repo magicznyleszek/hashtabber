@@ -47,7 +47,12 @@ function projectInterface() {
                     // find #link grandpa element
                     var grandpa = $('a[href="#' + hash + '"]').parents(tabber.options.container);
                     // get the index number from hash
-                    var number = hash.split('=')[1];
+                    var number;
+                    if (hash) {
+                        number = hash.split('=')[1];
+                    } else {
+                        number = 0;
+                    }
 
                     // get the parent nav and data lists
                     var parentNav = grandpa.find(tabber.options.nav);
