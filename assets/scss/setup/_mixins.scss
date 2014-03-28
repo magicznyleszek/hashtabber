@@ -1,6 +1,8 @@
+// --------------------------------------------------
 // positioning shorthand
 // @include absolute(top 10px right 30px);
-// --------------------
+// --------------------------------------------------
+
 @mixin position($position, $args) {
     // look for these offsets
     $offsets: top right bottom left;
@@ -20,27 +22,29 @@
     position: $position;
 }
 
-// private mixin for position absolute
-// -----------------------------------
 @mixin absolute($args) {
     @include position(absolute, $args);
 }
 
-// private mixin for position fixed
-// --------------------------------
 @mixin fixed($args) {
     @include position(fixed, $args);
 }
 
+
+// --------------------------------------------------
 // function to strip units from value
-// ----------------------------------
+// --------------------------------------------------
+
 @function parseInt($n) {
     @return $n / ($n * 0 + 1);
 }
 
+
+// --------------------------------------------------
 // function for converting to rem value
 // uses $fontSize
-// ------------------------------------
+// --------------------------------------------------
+
 @function rem($value) {
     $root: parseInt($fontSize);
     $val: parseInt($value);

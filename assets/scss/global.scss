@@ -1,26 +1,34 @@
 // Start with defining colors,
 // go with the default typography, 
 // and only then build up the rest.
+// --------------------------------------------------
 
-// scss libraries
-// --------------
+
+// --------------------------------------------------
+// libraries
+// --------------------------------------------------
+
 @import "compass/reset";
 @import "compass/css3";
+@import "libraries/hashTabber.scss";
 
+
+// --------------------------------------------------
 // base setup
-// ----------
+// --------------------------------------------------
+
 @import "setup/variables";
 @import "setup/mixins";
 @import "setup/columns";
 @import "setup/typography";
 
+
+// --------------------------------------------------
 // layout
-// ------
+// --------------------------------------------------
+
 @import "layout/base";
 @import "layout/header";
 @import "layout/content";
 @import "layout/footer";
-
-// libraries
-// ---------
-@import "libraries/hashTabber.scss";
+@import "layout/hashTabber-sandstone";

@@ -1,34 +1,52 @@
+// --------------------------------------------------
 // modular scale
-// -------------
+// --------------------------------------------------
+
 $scaleMain: 16;
 $scaleSecondary: 20;
 $scaleFraction: 1/2;
 $scaleFractionInverse: 1/$scaleFraction;
 // 4, 5, 8, 10, 16, 20, 32, 40, 64, 80, 128, 160, 256, 320, 512, 640, 1024, 1280, 2048, 2560
 
+
+// --------------------------------------------------
 // default settings
-// ----------------
+// --------------------------------------------------
+
 $fontSize: 20px;
 $fontSizeBig: 24px;
 $fontSizeSmall: 16px;
 $breakBig: 1280px;
 $breakSmall: 640px;
 
+
+// --------------------------------------------------
+// speed
+// --------------------------------------------------
+
+$fast: 0.3s;
+
+
+// --------------------------------------------------
 // colors
-// ------
+// --------------------------------------------------
+
 $black: rgb(0,0,0);
 $white: rgb(255,255,255);
 
 $violet: rgb(100,40,140);
 $cardinal: rgb(170,30,100);
 $crimson: rgb(240,20,60);
-$boulderDarker: rgb(32,20,20);
-$boulderDark: rgb(77,67,67);
-$boulder: rgb(121,114,114);
-$boulderLight: rgb(166,161,161);
-$boulderLighter: rgb(210,208,208);
+$sandstone: rgb(125,110,100);
+$sandstoneDark: shade($sandstone, 45);
+$sandstoneDarker: shade($sandstone, 90);
+$sandstoneLight: tint($sandstone, 45);
+$sandstoneLighter: tint($sandstone, 90);
 
+
+// --------------------------------------------------
 // fonts
-// -----
+// --------------------------------------------------
+
 $source: "Source Sans Pro", sans-serif;
-$code: "Source Code Pro", sans-serif;
+$code: "Source Code Pro", monospace;

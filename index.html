@@ -4,7 +4,7 @@ layout: default
 
 <p>Here are some tabs to navigate:</p>
 
-<section class="hashTabber" id="dinosaurs">
+<section class="hashTabber hashTabber-sandstone" id="dinosaurs" data-defaultTab="3">
     <ol class="hashTabber-nav">
         {% for dinosaur in site.data.dinosaurs %}
             <li>
@@ -45,8 +45,9 @@ layout: default
 
 <pre>
     <code lang="html">
-        &lt;section class="hashTabber" id="distinct-name" &gt;
+        &lt;section class="hashTabber hashTabber-theme" id="distinct-name" data-defaultTab="INDEX"&gt;
             &lt;ol class="hashTabber-nav"&gt;
+                &lt;h2&gt;Optional non-li title&lt;/h2&gt;
                 &lt;li&gt;First item&lt;/li&gt;
                 &lt;li&gt;Second item&lt;/li&gt;
                 &lt;li&gt;Third item&lt;/li&gt;

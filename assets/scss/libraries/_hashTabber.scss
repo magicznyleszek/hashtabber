@@ -1,9 +1,10 @@
-// those are really, really important
-// for hashTabber to work
+// --------------------------------------------------
+// hashTabber basic styles
+// Basically it is better to create kinda-theme class
+// insted of changing this basic document
+// --------------------------------------------------
 
-.hashTabber {
-
-}
+.hashTabber {}
 
 ol.hashTabber-nav, ol.hashTabber-data {
     list-style: none;
@@ -14,7 +15,7 @@ ol.hashTabber-nav, ol.hashTabber-data {
 ol.hashTabber-nav {
     > li {
         &.active > a {
-            
+            text-decoration: none;
         }
         > a {
             &:hover {
