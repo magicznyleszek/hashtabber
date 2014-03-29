@@ -16,8 +16,8 @@ $scaleFractionInverse: 1/$scaleFraction;
 $fontSize: 20px;
 $fontSizeBig: 24px;
 $fontSizeSmall: 16px;
-$breakBig: 1280px;
-$breakSmall: 640px;
+$breakBig: 1281px;
+$breakSmall: 641px;
 
 
 // --------------------------------------------------
@@ -40,7 +40,7 @@ $crimson: rgb(240,20,60);
 $sandstone: rgb(125,110,100);
 $sandstoneDark: shade($sandstone, 45);
 $sandstoneDarker: shade($sandstone, 90);
-$sandstoneLight: tint($sandstone, 45);
+$sandstoneLight: tint($sandstone, 60);
 $sandstoneLighter: tint($sandstone, 90);
 
 

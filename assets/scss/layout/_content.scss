@@ -2,3 +2,10 @@ section.page-content {
     max-width: rem(960px);
     margin: auto;
 }
+
+section.example {
+    @include column();
+    border: 0.0625rem solid $sandstoneDarker;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
