@@ -1,7 +1,7 @@
 .hashTabber.hashTabber-sandstone {
     @include column();
     background-color: $sandstoneLighter;
-    padding: 0.5rem;
+    padding: 0.75rem;
 }
 
 .hashTabber-sandstone ol.hashTabber-nav, .hashTabber-sandstone ol.hashTabber-data {
@@ -11,17 +11,17 @@
 }
 
 .hashTabber-sandstone ol.hashTabber-nav {
-    @include column(1,6);
+    @include column(1,5);
     > h2 {
-        font-size: 0.75rem;
+        font-size: 0.875rem;
         text-transform: uppercase;
-        padding: 1.25rem 0.5rem 0.25rem 0.5rem;
+        padding: 0.75rem 0.5rem 0.25rem 0.5rem;
         color: $sandstoneDark;
     }
     > li {
         @include column();
         &:not(:first-child) {
-            margin-top: 0.125rem;
+            margin-top: 0.2rem;
         }
         &.active {
             a {
@@ -43,6 +43,7 @@
             color: $white;
             background-color: $sandstone;
             border-bottom: 0.0625rem solid $sandstoneDark;
+            font-size: 0.875rem;
             &:hover {
                 background-color: $sandstoneDark;
                 border-color: $sandstoneDarker;
@@ -52,7 +53,7 @@
 }
 
 .hashTabber-sandstone ol.hashTabber-data {
-    @include column(5,6);
+    @include column(4,5);
     @include border-radius(0.25rem);
     background-color: $white;
     padding: 1rem 1.5rem 1.5rem 1rem;

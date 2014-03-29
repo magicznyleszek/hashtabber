@@ -78,6 +78,17 @@ em {
 
 code {
     font-family: $code;
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    background-color: $sandstoneLighter;
+}
+
+pre {
+    code {
+        @include box-sizing(border-box);
+        padding: 0.5rem;
+    }
 }
 
 small, sub, sup {

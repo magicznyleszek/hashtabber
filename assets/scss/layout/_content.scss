@@ -6,6 +6,6 @@ section.page-content {
 section.example {
     @include column();
     border: 0.0625rem solid $sandstoneDarker;
-    padding: 1.5rem;
+    padding: 0.25rem;
     margin: 1.5rem 0;
 }
