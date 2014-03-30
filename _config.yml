@@ -4,8 +4,8 @@ description: "Short description"
 author: "Leszek Pietrzak"
 
 # address settings
-# url: "http://hashtabber.smutnyleszek.com"
-url: "http://0.0.0.0:4000"
+url: "http://hashtabber.smutnyleszek.com"
+# url: "http://0.0.0.0:4000"
 permalink: /post/:title
 
 # site configuration
