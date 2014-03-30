@@ -1,5 +1,5 @@
 // --------------------------------------------------
-// hashTabber 0.2 by smutnyleszek@gmail.com
+// hashTabber 0.3 by smutnyleszek@gmail.com
 // http://hashtabber.smutnyleszek.com
 // License CC0 1.0
 // --------------------------------------------------
@@ -68,17 +68,14 @@ function hashTabber(customOptions) {
             return true;
         },
         tabSwiper: function (options, hash) {
-            // check if link exists
-            if (document.querySelector('a[href="#' + hash + '"]') != null) {
-                // find #link grandpa element
-                var grandpa = document.querySelector('a[href="#' + hash + '"]').parentNode.parentNode.parentNode;
+            // check if any hash-link exists in container element
+            if (document.querySelectorAll(options.container + ' a[href="#' + hash + '"]').length > 0) {
+                // find #link grandpa element in container element
+                var grandpa = document.querySelector(options.container + ' a[href="#' + hash + '"]').parentNode.parentNode.parentNode;
                 // get the index number from hash
                 var number;
                 if (hash) {
                     number = parseInt(hash.split('=')[1], 10);
-                    if (number != parseInt(number)) {
-                        number = 0;
-                    }
                 } else {
                     number = 0;
                 }

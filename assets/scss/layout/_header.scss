@@ -3,6 +3,15 @@ header.page-header {
     margin: auto;
 }
 
+h1.page-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    padding: 3rem 0 4.5rem;
+    letter-spacing: -0.125rem;
+    color: $crimson;
+    @include text-shadow($crimsonDark 0 0.125rem 0);
+}
+
 nav.page-main-navigation {
     @include fixed(top 0 right 0);
     z-index: 2;
@@ -27,6 +36,9 @@ nav.page-main-navigation {
             a {
                 width: 10rem;
             }
+            &:last-child a {
+                border-bottom: 0.125rem solid $crimsonDark;
+            }
         }
     }
     a {
@@ -43,6 +55,7 @@ nav.page-main-navigation {
     }
     a.close, a.open {
         @include absolute(top 0 right 0);
+        border-bottom: 0.125rem solid $crimsonDark;
     }
     a.close {
         display: none;
