@@ -1,28 +1,13 @@
 // --------------------------------------------------
 // hashTabber basic styles
 // Basically it is better to create kinda-theme class
-// insted of changing this basic document
+// insted of changing this document
 // --------------------------------------------------
-
-.hashTabber {}
 
 ol.hashTabber-nav, ol.hashTabber-data {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-ol.hashTabber-nav {
-    > li {
-        &.active > a {
-            text-decoration: none;
-        }
-        > a {
-            &:hover {
-                
-            }
-        }
-    }
 }
 
 ol.hashTabber-data {

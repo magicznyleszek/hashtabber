@@ -4,14 +4,22 @@
 // License CC0 1.0
 // --------------------------------------------------
 
-function hashTabber() {
+function hashTabber(customOptions) {
     this.options = {
-        container: '.hashTabber',
-        nav: '.hashTabber-nav',
-        data: '.hashTabber-data',
         activeClass: 'active',
+        container: '.hashTabber',
+        data: '.hashTabber-data',
+        nav: '.hashTabber-nav',
         tab: 'data-defaultTab',
     };
+    if (customOptions) {
+        if (customOptions.activeClass) {this.options.activeClass = customOptions.activeClass}
+        if (customOptions.activeClass) {this.options.activeClass = customOptions.activeClass}
+        if (customOptions.container) {this.options.container = customOptions.container}
+        if (customOptions.data) {this.options.data = customOptions.data}
+        if (customOptions.nav) {this.options.nav = customOptions.nav}
+        if (customOptions.tab) {this.options.tab = customOptions.tab}
+    }
     this.helpers = {
         hashProber: function () {
             // get hash from window location
@@ -68,6 +76,9 @@ function hashTabber() {
                 var number;
                 if (hash) {
                     number = parseInt(hash.split('=')[1], 10);
+                    if (number != parseInt(number)) {
+                        number = 0;
+                    }
                 } else {
                     number = 0;
                 }

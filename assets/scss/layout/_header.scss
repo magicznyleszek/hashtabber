@@ -4,5 +4,47 @@ header.page-header {
 }
 
 nav.page-main-navigation {
-    // I'm a main menu thingy!
+    @include fixed(top 0 right 0);
+    z-index: 2;
+    font-size: 1rem;
+    @include single-transition(right, $fast);
+    &:target {
+        right: 10rem;
+        a.open {
+            display: none;
+        }
+        a.close {
+            display: block;
+        }
+    }
+    ol {
+        background-color: $crimson;
+        height: auto;
+        margin: 0;
+        @include absolute(top 0 left 0);
+        li {
+            display: block;
+            a {
+                width: 10rem;
+            }
+        }
+    }
+    a {
+        color: $white;
+        background-color: $crimson;
+        line-height: 2rem;
+        padding: 0 0.5rem;
+        display: block;
+        text-decoration: none;
+        text-align: left;
+        &:hover {
+            background-color: $crimsonLight;
+        }
+    }
+    a.close, a.open {
+        @include absolute(top 0 right 0);
+    }
+    a.close {
+        display: none;
+    }
 }

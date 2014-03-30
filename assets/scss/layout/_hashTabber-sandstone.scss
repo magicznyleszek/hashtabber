@@ -1,7 +1,7 @@
 .hashTabber.hashTabber-sandstone {
     @include column();
     background-color: $sandstoneLighter;
-    padding: 0.75rem;
+    padding: 1rem;
 }
 
 .hashTabber-sandstone ol.hashTabber-nav, .hashTabber-sandstone ol.hashTabber-data {
@@ -30,19 +30,19 @@
                 border-color: $sandstoneLight;
                 &:hover {
                     background-color: $white;
-                    border-color: $sandstoneLight;
                     color: $sandstoneDark;
+                    border-color: $sandstoneLight;
                 }
             }
         }
         > a {
             display: block;
             @include border-radius(0.25rem 0 0 0.25rem);
-            padding: 0.25rem 0.5rem;
+            padding: 0.5rem 0.75rem;
             text-decoration: none;
             color: $white;
             background-color: $sandstone;
-            border-bottom: 0.0625rem solid $sandstoneDark;
+            border-bottom: 0.125rem solid $sandstoneDark;
             font-size: 0.875rem;
             &:hover {
                 background-color: $sandstoneDark;
@@ -57,7 +57,7 @@
     @include border-radius(0.25rem);
     background-color: $white;
     padding: 1rem 1.5rem 1.5rem 1rem;
-    border-bottom: 0.0625rem solid $sandstoneLight;
+    border-bottom: 0.125rem solid $sandstoneLight;
     min-height: rem(400px);
     > li {
         @include opacity(0);
@@ -65,8 +65,8 @@
         height: 0;
         overflow: hidden;
         h3 {
-            padding-bottom: 0.25rem;
-            border-bottom: 0.0625rem solid $sandstoneLighter;
+            padding-bottom: 0.5rem;
+            border-bottom: 0.125rem solid $sandstoneLighter;
         }
         &.active {
             @include opacity(1);

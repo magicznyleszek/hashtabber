@@ -12,19 +12,26 @@ html {
 a {
     color: $crimson;
     outline: none;
-    text-decoration: underline;
+    text-decoration: none;
     &:visited {
-        color: $violet;
+        color: $crimsonDark;
     }
     &:hover {
-        color: $cardinal;
-        text-decoration: none;
+        color: $crimsonLight;
+        text-decoration: underline;
     }
 }
 
 h1, h2, h3, h4, h5, h6 {
+    line-height: 1.5rem;
+    &:not(:first-child) {
+        margin-top: 3rem;
+    }
     &.highlighted {
-        background-color: red;
+        border-bottom: 0.25rem solid $sandstoneLighter;
+    }
+    a, a:hover {
+        text-decoration: none;
     }
 }
 
@@ -40,9 +47,9 @@ h3 {
     font-size: 1.5rem;
 }
 
-p {
+p, pre, section.example {
     &:not(:first-child) {
-        margin-top: 0.75rem;
+        margin-top: 1.5rem;
     }
 }
 
@@ -78,15 +85,18 @@ em {
 
 code {
     font-family: $code;
-    display: block;
-    width: 100%;
-    overflow-x: auto;
+    font-size: 0.75rem;
     background-color: $sandstoneLighter;
     border: 0.0625rem solid $sandstoneLight;
+    padding: 0 0.125rem;
+    @include border-radius(0.25rem);
 }
 
 pre {
     code {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
         @include box-sizing(border-box);
         padding: 0.5rem;
     }

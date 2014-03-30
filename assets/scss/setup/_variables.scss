@@ -34,9 +34,10 @@ $fast: 0.3s;
 $black: rgb(0,0,0);
 $white: rgb(255,255,255);
 
-$violet: rgb(100,40,140);
-$cardinal: rgb(170,30,100);
 $crimson: rgb(240,20,60);
+$crimsonDark: shade($crimson, 15);
+$crimsonLight: tint($crimson, 15);
+
 $sandstone: rgb(125,110,100);
 $sandstoneDark: shade($sandstone, 45);
 $sandstoneDarker: shade($sandstone, 90);

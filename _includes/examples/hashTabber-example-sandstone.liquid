@@ -1,0 +1,21 @@
+<section class="example">
+    <section class="hashTabber hashTabber-sandstone" id="dinosaurs" data-defaultTab="3">
+        <ol class="hashTabber-nav">
+            <h2>Species:</h2>
+            {% for dinosaur in site.data.dinosaurs %}
+                <li>
+                    <a>{{ dinosaur.name }}</a>
+                </li>
+            {% endfor %}
+        </ol><!--
+     --><ol class="hashTabber-data">
+            {% for dinosaur in site.data.dinosaurs %}
+                <li>
+                    <h3>{{ dinosaur.name}}</h3>
+                    <p>{{ dinosaur.description }}</p>
+                    <p><a href="{{ dinosaur.url }}" target="_blank">Read more about {{ dinosaur.name }}</a></p>
+                </li>
+            {% endfor %}
+        </ol>
+    </section>
+</section>

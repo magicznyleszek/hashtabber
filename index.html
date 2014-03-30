@@ -2,49 +2,80 @@
 layout: default
 ---
 
-<p>Here are some tabs to navigate:</p>
 
-<section class="example">
-    <section class="hashTabber hashTabber-sandstone" id="dinosaurs" data-defaultTab="3">
-        <ol class="hashTabber-nav">
-            <h2>Species:</h2>
-            {% for dinosaur in site.data.dinosaurs %}
-                <li>
-                    <a>{{ dinosaur.name }}</a>
-                </li>
-            {% endfor %}
-        </ol><!--
-     --><ol class="hashTabber-data">
-            {% for dinosaur in site.data.dinosaurs %}
-                <li>
-                    <h3>{{ dinosaur.name}}</h3>
-                    <p>{{ dinosaur.description }}</p>
-                    <p><a href="{{ dinosaur.url }}" target="_blank">Read more about {{ dinosaur.name }}</a></p>
-                </li>
-            {% endfor %}
-        </ol>
-    </section>
-</section>
+<h2>Overview<a href="#menu-overview" name="menu-overview"> <small><i class="fa fa-link"></i></small></a></h2>
 
-<p>Here are some more tabs to navigate:</p>
+<p>This is a simple JavaScript plugin for a hashchange-driven tabbed content switcher. Personally I'm not a tabsphiliac, but I needed those a few times recently and decided to make a semi-universal solution.</p>
 
-<section class="example">
-    <section class="hashTabber" id="philosophers">
-        <ol class="hashTabber-nav">
-            {% for philosopher in site.data.philosophers %}
-                <li>
-                    <a>{{ philosopher.name }}</a>
-                </li>
-            {% endfor %}
-        </ol><!--
-     --><ol class="hashTabber-data">
-            {% for philosopher in site.data.philosophers %}
-                <li>
-                    <p>{{ philosopher.description }}</p>
-                </li>
-            {% endfor %}
-        </ol>
-    </section>
-</section>
+<p>Features:</p>
 
-<pre><code lang="html">{% include hashTabber-html-example.liquid %}</code></pre>
+<ul>
+    <li>Pure JavaScript</li>
+    <li>SCSS stylesheet</li>
+    <li>Changeable from outside via #link</li>
+</ul>
+
+
+<h2>Getting started<a href="#menu-getting-started" name="menu-getting-started"> <small><i class="fa fa-link"></i></small></a></h2>
+
+<p>Include those two files:</p>
+
+<ul>
+    <li><code>hashTabber.js</code> &ndash; with a single object inside; so you could as well just paste it to your script.js to avoid unnecessary HTML request</li>
+    <li><code>_hashTabber.scss</code> &ndash; something like 20 lines of code that would be best to just @include in your global.scss</li>
+</ul>
+
+<p>Build a html hashTabber section:</p>
+
+<pre><code lang="html">{% include examples/hashTabber-example-code-html.liquid %}</code></pre>
+
+<p>Important things for the whole thing to work are:</p>
+
+<ul>
+    <li><strong>relationships</strong> &ndash; the script assumes that <code>.hashTabber</code> has two immediate children: <code>ol.hashTabber-nav</code> and <code>ol.hashTabber-data</code> with their children being <code>&lt;li&gt;</code>s</li>
+    <li><strong>base class</strong> &ndash; the script will be looking for the all the elements with <code>hashTabber</code> class</li>
+    <li><strong>the id</strong> &ndash; a html id attribute (<code>#distinct-name.hashTabber</code>) that will be used to generate #links for tabs navigation elements; this could be anything</li>
+    <li><strong>two <em>ordered</em> lists</strong> &ndash; one list of navigation (<code>&lt;ol class="hashTabber-nav"&gt;</code>) and one for data (<code>&lt;ol class="hashTabber-data"&gt;</code>); the script pairs up two <code>&lt;li&gt;</code> from those two lists with the same index</li>
+</ul>
+
+<p>Then just run the damn thing:</p>
+
+<pre><code lang="javascript">{% include examples/hashTabber-example-code-js-run.liquid %}</code></pre>
+
+
+<h2>Options<a href="#menu-options" name="menu-options"> <small><i class="fa fa-link"></i></small></a></h2>
+
+<p>It's rather pointless to change anything here, but if you like, please do:</p>
+
+<pre><code lang="javascript">{% include examples/hashTabber-example-code-js-options.liquid %}</code></pre>
+
+<p>For now, the only valuable options are:</p>
+
+<ul>
+    <li><code>data-defaultTab="3"</code> &ndash; this HTML attribute for main container sets the default tab (surprisingly!); undefined is set to 0</li>
+</ul>
+
+<p>It's also worth to mention, that both <code>&lt;ol&gt;</code> lists could contain countless different nodes (<code>&lt;h2&gt;</code> for example), as the script takes into account (and counts) only <code>&lt;li&gt;</code> nodes inside of them.</p>
+
+
+<h2>Themes<a href="#menu-themes" name="menu-themes"> <small><i class="fa fa-link"></i></small></a></h2>
+
+<p>I feel kinda stupid writing about that, as this is something rather personal for everybody. But with theming, I would go with an additional class <code>hashTabber-name</code>. This blank example could be a good start:</p>
+
+<pre><code lang="scss">{% include examples/hashTabber-example-theme-blank.liquid %}</code></pre>
+
+
+<h2>Examples<a href="#menu-examples" name="menu-examples"> <small><i class="fa fa-link"></i></small></a></h2>
+
+<p>This is an example with basic theming applied:</p>
+
+{% include examples/hashTabber-example-sandstone.liquid %}
+
+<p>This is a naked (unthemed) script in work:</p>
+
+{% include examples/hashTabber-example-naked.liquid %}
+
+
+<h2>License<a href="#menu-license" name="menu-license"> <small><i class="fa fa-link"></i></small></a></h2>
+
+<p><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal</a> (it's public domain)</p>
