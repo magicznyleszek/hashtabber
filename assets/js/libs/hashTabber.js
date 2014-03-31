@@ -12,13 +12,14 @@ function hashTabber(customOptions) {
         nav: '.hashTabber-nav',
         tab: 'data-defaultTab',
     };
+    // check if there are any custom options
     if (customOptions) {
-        if (customOptions.activeClass) {this.options.activeClass = customOptions.activeClass}
-        if (customOptions.activeClass) {this.options.activeClass = customOptions.activeClass}
-        if (customOptions.container) {this.options.container = customOptions.container}
-        if (customOptions.data) {this.options.data = customOptions.data}
-        if (customOptions.nav) {this.options.nav = customOptions.nav}
-        if (customOptions.tab) {this.options.tab = customOptions.tab}
+        // go through all the options and set new values if provided
+        if (customOptions.activeClass) {this.options.activeClass = customOptions.activeClass;}
+        if (customOptions.container) {this.options.container = customOptions.container;}
+        if (customOptions.data) {this.options.data = customOptions.data;}
+        if (customOptions.nav) {this.options.nav = customOptions.nav;}
+        if (customOptions.tab) {this.options.tab = customOptions.tab;}
     }
     this.helpers = {
         hashProber: function () {
@@ -55,13 +56,13 @@ function hashTabber(customOptions) {
                     }
                     // set default to active
                     if (b === defaultTab) {
-                        navList[b].classList.add(options.activeClass);
+                        addClass(navList[b], options.activeClass);
                     }
                 }
                 var dataList = containerList[a].querySelectorAll(options.data + '>li');
                 for (var d = 0; d < navList.length; d++) {
                     if (d === defaultTab) {
-                        dataList[d].classList.add(options.activeClass);
+                        addClass(dataList[d], options.activeClass);
                     }
                 }
             }
@@ -85,17 +86,17 @@ function hashTabber(customOptions) {
                 // clear active class of all nav elements and give it to the target one
                 for (var e = 0; e < parentNavList.length; e++) {
                     if (e === number) {
-                        parentNavList[e].classList.add(options.activeClass);
+                        addClass(parentNavList[e], options.activeClass);
                     } else {
-                        parentNavList[e].classList.remove(options.activeClass);
+                        removeClass(parentNavList[e], options.activeClass);
                     }
                 }
                 // clear active class of all data elements and give it to the target one
                 for (var f = 0; f < parentDataList.length; f++) {
                     if (f === number) {
-                        parentDataList[f].classList.add(options.activeClass);
+                        addClass(parentDataList[f], options.activeClass);
                     } else {
-                        parentDataList[f].classList.remove(options.activeClass);
+                        removeClass(parentDataList[f], options.activeClass);
                     }
                 }
                 return true;
@@ -114,5 +115,24 @@ function hashTabber(customOptions) {
         window.onhashchange = function () {
             that.helpers.tabSwiper(that.options, that.helpers.hashProber());
         };
-    }
+    };
+}
+
+// --------------------------------------------------
+// Class managing helper functions
+// --------------------------------------------------
+
+function hasClass(el, cl) {
+    return el.className && new RegExp("(\\s|^)" + cl + "(\\s|$)").test(el.className);
+}
+function addClass(el, cl) {
+    if (!hasClass(el, cl)) {el.className += ' ' + cl;}
+}
+function removeClass(el, cl) {
+    var reg = new RegExp("(\\s|^)" + cl + "(\\s|$)");
+    el.className = el.className.replace(reg, " ").replace(/(^\s*)|(\s*$)/g,"");
+}
+function toggleClass(el, cl) {
+    if (hasClass(el, cl)) {removeClass(el, cl);}
+    else {addClass(el, cl);}
 }
