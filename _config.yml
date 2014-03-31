@@ -1,6 +1,6 @@
 # description
 name: "hashTabber"
-description: "Short description"
+description: "A simple hash-driven tabbed navigation"
 author: "Leszek Pietrzak"
 
 # address settings

@@ -10,6 +10,10 @@ h1.page-title {
     letter-spacing: -0.125rem;
     color: $crimson;
     @include text-shadow($crimsonDark 0 0.125rem 0);
+    @media screen and (max-width: #{$breakSmall}) {
+        font-size: 3rem;
+        @include text-shadow($crimsonDark 0 0.0625rem 0);
+    }
 }
 
 nav.page-main-navigation {
@@ -27,7 +31,6 @@ nav.page-main-navigation {
         }
     }
     ol {
-        background-color: $crimson;
         height: auto;
         margin: 0;
         @include absolute(top 0 left 0);
@@ -38,6 +41,7 @@ nav.page-main-navigation {
             }
             &:last-child a {
                 border-bottom: 0.125rem solid $crimsonDark;
+                @include border-radius(0 0 0 0.25rem);
             }
         }
     }
@@ -56,6 +60,7 @@ nav.page-main-navigation {
     a.close, a.open {
         @include absolute(top 0 right 0);
         border-bottom: 0.125rem solid $crimsonDark;
+        @include border-radius(0 0 0 0.25rem);
     }
     a.close {
         display: none;

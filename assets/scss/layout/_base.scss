@@ -2,3 +2,23 @@ body {
     min-height: 100%;
     padding: 1rem;
 }
+
+a.fake-button {
+    color: $white;
+    background-color: $crimson;
+    line-height: 2rem;
+    padding: 0 0.5rem;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 0.125rem solid $crimsonDark;
+    @include border-radius(0.25rem);
+    &:hover {
+        background-color: $crimsonLight;
+        border-color: $crimsonDark;
+    }
+    &.fake-button-big {
+        font-size: 1.5rem;
+        line-height: 3rem;
+        padding: 0 0.75rem;
+    }
+}

@@ -18,7 +18,13 @@ a {
     }
     &:hover {
         color: $crimsonLight;
-        text-decoration: underline;
+    }
+}
+
+p a {
+    border-bottom: 0.125rem solid $crimson;
+    &:hover {
+        border-color: transparent;
     }
 }
 

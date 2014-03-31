@@ -1,20 +1,19 @@
 ## TEAM
 
-Your title: Name Surname
-Site: url
-Email: email
-Location: city, country
+Everything: Leszek Pietrzak
+Site: leszekpietrzak.com
+Email: smutnyleszek@gmail.com
+Location: Warsaw, Poland
 
 ## THANKS
 
+Tom Preston-Werner, Nick Quaranto: jekyllrb.com
 Dave Gandy: fontawesome.io
 Christopher Eppstein: compass-style.org
-Faruk Ateş: modernizr.com
-John Resig: jquery.com
-Name: url/email
+Chris Armstrong: goldilocksapproach.com
 
 ## SITE
 
-Last update: YYYY/MM/DD
-Language: Polish, English
-Software: Sublime Text 2, Adobe Illustrator
+Last update: 2014/03/31
+Language: English
+Software: Sublime Text 2
