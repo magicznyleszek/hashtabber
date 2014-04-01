@@ -117,6 +117,7 @@ function hashTabber(customOptions) {
         };
         return true;
     };
+    return true;
 }
 
 // --------------------------------------------------
