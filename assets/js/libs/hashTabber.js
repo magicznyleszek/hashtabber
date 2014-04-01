@@ -115,6 +115,7 @@ function hashTabber(customOptions) {
         window.onhashchange = function () {
             that.helpers.tabSwiper(that.options, that.helpers.hashProber());
         };
+        return true;
     };
 }
 

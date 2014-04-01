@@ -33,7 +33,7 @@ layout: default
 <p>Include those two files:</p>
 
 <ul>
-    <li><code>hashTabber.js</code> &ndash; with a single object inside; so you could as well just paste it to your script.js to avoid unnecessary HTML request</li>
+    <li><code>hashTabber.js</code> &ndash; with a single object inside and four helper functions; so you could as well just paste it to your script.js to avoid an unnecessary HTML request</li>
     <li><code>_hashTabber.scss</code> &ndash; something like 20 lines of code that would be best to just @include in your global.scss</li>
 </ul>
 
@@ -44,15 +44,17 @@ layout: default
 <p>Important things for the whole thing to work are:</p>
 
 <ul>
-    <li><strong>relationships</strong> &ndash; the script assumes that <code>.hashTabber</code> has two immediate children: <code>ol.hashTabber-nav</code> and <code>ol.hashTabber-data</code> with their children being <code>&lt;li&gt;</code>s</li>
     <li><strong>base class</strong> &ndash; the script will be looking for the all the elements with <code>hashTabber</code> class</li>
-    <li><strong>the id</strong> &ndash; a html id attribute (<code>#distinct-name.hashTabber</code>) that will be used to generate #links for tabs navigation elements; this could be anything</li>
-    <li><strong>two <em>ordered</em> lists</strong> &ndash; one list of navigation (<code>&lt;ol class="hashTabber-nav"&gt;</code>) and one for data (<code>&lt;ol class="hashTabber-data"&gt;</code>); the script pairs up two <code>&lt;li&gt;</code> from those two lists with the same index</li>
+    <li><strong>relationships</strong> &ndash; the script assumes that <code>.hashTabber</code> has two immediate children: <code>ol.hashTabber-nav</code> (for navigation) and <code>ol.hashTabber-data</code> (for content) with their immediate children being <code>li</code>s; the script pairs up two <code>li</code>s with the same index from those two lists</li>
+    <li><strong>the id</strong> &ndash; a HTML attribute <code>id="distinct-name"</code> that will be used to generate links for tabbed navigation</li>
+    <li><strong>links</strong> &ndash; every navigation list element <code>ol.hashTabber-nav > li</code> needs to have an immediate child node <code>&lt;a&gt;</code> for <code>#distinct-name=INDEX</code> hrefs creation</li>
 </ul>
 
 <p>Then just run the damn thing:</p>
 
 <pre><code lang="javascript">{% include examples/hashTabber-example-code-js-run.liquid %}</code></pre>
+
+<p>If the content changes after hashTabber was triggered, you can just use the <code>.run()</code> method again.</p>
 
 
 <h2>Options<a href="#menu-options" name="menu-options"> <small><i class="fa fa-link"></i></small></a></h2>
@@ -64,7 +66,7 @@ layout: default
 <p>For now, the only valuable options are:</p>
 
 <ul>
-    <li><code>data-defaultTab="3"</code> &ndash; this HTML attribute for main container sets the default tab (surprisingly!); undefined is set to 0</li>
+    <li><code>data-defaultTab="3"</code> &ndash; this HTML attribute of <code>.hashTabber</code> changes the default tab from 0 to the given number</li>
 </ul>
 
 <p>It's also worth to mention, that both <code>&lt;ol&gt;</code> lists could contain countless different nodes (<code>&lt;h2&gt;</code> for example), as the script takes into account (and counts) only <code>&lt;li&gt;</code> nodes inside of them.</p>
@@ -72,7 +74,7 @@ layout: default
 
 <h2>Themes<a href="#menu-themes" name="menu-themes"> <small><i class="fa fa-link"></i></small></a></h2>
 
-<p>I feel kinda stupid writing about that, as this is something rather personal for everybody. But with theming, I would go with an additional class <code>hashTabber-name</code>. This blank example could be a good start:</p>
+<p>This is something rather personal for everybody, but with theming, I would personally go with an additional class <code>hashTabber-name</code> for the <code>.hashTabber</code> container. This blank example could be a good start:</p>
 
 <pre><code lang="scss">{% include examples/hashTabber-example-theme-blank.liquid %}</code></pre>
 
