@@ -1,6 +1,6 @@
-# HashTabber
+# hashTabber
 
-This is a simple hash-driven tabbed navigation system. I was constantly in need of those, so I finally made a kinda-plugin. It uses some JavaScript and SCSS.
+This is a simple JavaScript plugin for hashchange-driven tabbed navigation system. I was constantly in need of those, so I finally made a kinda-plugin.
 
 You can read more at [hashtabber.smutnyleszek.com](http://hashtabber.smutnyleszek.com).
 
