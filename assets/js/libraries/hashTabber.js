@@ -1,5 +1,5 @@
 // --------------------------------------------------
-// hashTabber 1.0 by smutnyleszek@gmail.com
+// hashTabber v1.0 by smutnyleszek@gmail.com
 // http://hashtabber.smutnyleszek.com
 // License CC0 1.0
 // --------------------------------------------------
