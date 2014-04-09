@@ -1,18 +1,14 @@
-<section class="example">
-    <section class="hashTabber" id="philosophers">
-        <ol class="hashTabber-nav">
-            {% for philosopher in site.data.philosophers %}
-                <li>
-                    <a>{{ philosopher.name }}</a>
-                </li>
-            {% endfor %}
-        </ol><!--
-     --><ol class="hashTabber-data">
-            {% for philosopher in site.data.philosophers %}
-                <li>
-                    <p>{{ philosopher.description }}</p>
-                </li>
-            {% endfor %}
-        </ol>
-    </section>
-</section>
+<ol class="hashTabber-nav" data-hashtabber-id="philosophers">
+    {% for philosopher in site.data.philosophers %}
+        <li>
+            <a>{{ philosopher.name }}</a>
+        </li>
+    {% endfor %}
+</ol><!--
+--><ol class="hashTabber-data" data-hashtabber-id="philosophers">
+    {% for philosopher in site.data.philosophers %}
+        <li>
+            <p>{{ philosopher.description }}</p>
+        </li>
+    {% endfor %}
+</ol>

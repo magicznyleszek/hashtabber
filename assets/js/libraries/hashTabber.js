@@ -1,108 +1,138 @@
 // --------------------------------------------------
-// hashTabber v1.0 by smutnyleszek@gmail.com
+// hashTabber v2.0 by smutnyleszek@gmail.com
 // http://hashtabber.smutnyleszek.com
 // License CC0 1.0
 // --------------------------------------------------
 
 function hashTabber(customOptions) {
     this.options = {
-        activeClass: 'active',
-        container: '.hashTabber',
-        data: '.hashTabber-data',
-        nav: '.hashTabber-nav',
-        tab: 'data-defaultTab',
+        classActive: 'active',
+        classData: 'hashTabber-data',
+        classNav: 'hashTabber-nav',
+        dataDefault: 'data-hashtabber-default',
+        dataId: 'data-hashtabber-id',
+        dataPair: 'data-hashtabber-pair',
     };
     // check if there are any custom options
     if (customOptions) {
         // go through all the options and set new values if provided
-        if (customOptions.activeClass) {this.options.activeClass = customOptions.activeClass;}
-        if (customOptions.container) {this.options.container = customOptions.container;}
-        if (customOptions.data) {this.options.data = customOptions.data;}
-        if (customOptions.nav) {this.options.nav = customOptions.nav;}
-        if (customOptions.tab) {this.options.tab = customOptions.tab;}
+        if (customOptions.classActive) {this.options.classActive = customOptions.classActive;}
+        if (customOptions.classActive) {this.options.classActive = customOptions.classActive;}
+        if (customOptions.classData) {this.options.classData = customOptions.classData;}
+        if (customOptions.classNav) {this.options.classNav = customOptions.classNav;}
+        if (customOptions.dataDefault) {this.options.dataDefault = customOptions.dataDefault;}
+        if (customOptions.dataId) {this.options.dataId = customOptions.dataId;}
+        if (customOptions.dataPair) {this.options.dataPair = customOptions.dataPair;}
     }
     this.helpers = {
         hashProber: function () {
-            // get hash from window location
-            var hash = window.location.hash.toString().replace('#', '');
-            // check if not null or undefined
-            // and return false or hash
-            if (hash === "" || hash === undefined) {
+            // get hash from window location and remove # character
+            var hash = String(window.location.hash.replace('#', ''));
+            // check if empty and return false or hash array
+            if (hash.length === 0) {
                 return false;
             } else {
+                // split hash to array of parameters by "=" and "&"
+                hash = hash.split(/=|&/);
                 return hash;
             }
         },
         idsGiver: function (options) {
-            // loop through every instance of hashTabber
-            var containerList = document.querySelectorAll(options.container);
-            for (var a = 0; a < containerList.length; a++) {
-                // get the distinct id of current tabber and default tab
-                var distinctName = containerList[a].getAttribute('id');
-                var defaultTab = 0;
-                // check if defaultTab html data is set
-                if (containerList[a].getAttribute(options.tab)) {
-                    defaultTab = parseInt(containerList[a].getAttribute(options.tab), 10);
+            // loop through every instance of hashTabber (nav)
+            var tabbers = document.querySelectorAll('.' + options.classNav);
+            for (var a = 0; a < tabbers.length; a++) {
+                // get current tabber id and default tab
+                var tabberId = tabbers[a].getAttribute(options.dataId);
+                var tabberDefault = '0';
+                var tabName = '';
+                // check if -default html data is set
+                if (tabbers[a].getAttribute(options.dataDefault)) {
+                    tabberDefault = tabbers[a].getAttribute(options.dataDefault);
                 }
                 // loop through every nav element of current tabber
-                var navList = containerList[a].querySelectorAll(options.nav + '>li');
+                var navList = tabbers[a].querySelectorAll('.' + options.classNav + '>li');
                 for (var b = 0; b < navList.length; b++) {
-                    // add #link to first a element in li
+                    // set current item name to loop index
+                    // or custom -pair name if given
+                    tabName = String(b);
+                    if (navList[b].getAttribute(options.dataPair)) {
+                        tabName = navList[b].getAttribute(options.dataPair);
+                    }
+                    // add #link to first a element in tab
                     var navLiChildren = navList[b].childNodes;
                     for(var c = 0; c < navLiChildren.length; c++) {
                         if (navLiChildren[c].localName == 'a') {
-                            navLiChildren[c].setAttribute('href', '#' + distinctName + '=' + b);
+                            navLiChildren[c].setAttribute('href', '#' + tabberId + '=' + tabName);
                         }
                     }
                     // set default to active
-                    if (b === defaultTab) {
-                        addClass(navList[b], options.activeClass);
+                    if (tabName === tabberDefault) {
+                        addClass(navList[b], options.classActive);
                     }
                 }
-                var dataList = containerList[a].querySelectorAll(options.data + '>li');
-                for (var d = 0; d < navList.length; d++) {
-                    if (d === defaultTab) {
-                        addClass(dataList[d], options.activeClass);
+                // find corresponding data element and lopp through its children
+                var dataList = document.querySelectorAll('.' + options.classData + '[' + options.dataId + '="' + tabberId + '"]' + '>li');
+                for (var d = 0; d < dataList.length; d++) {
+                    // set current item name to loop index
+                    // or custom -pair name if given
+                    tabName = String(d);
+                    if (dataList[d].getAttribute(options.dataPair)) {
+                        tabName = dataList[d].getAttribute(options.dataPair);
+                    }
+                    // set default to active
+                    if (tabName === tabberDefault) {
+                        addClass(dataList[d], options.classActive);
                     }
                 }
             }
             return true;
         },
-        tabSwiper: function (options, hash) {
-            // check if any hash-link exists in container element
-            if (document.querySelectorAll(options.container + ' a[href="#' + hash + '"]').length > 0) {
-                // find #link grandpa element in container element
-                var grandpa = document.querySelector(options.container + ' a[href="#' + hash + '"]').parentNode.parentNode.parentNode;
-                // get the index number from hash
-                var number;
-                if (hash) {
-                    number = parseInt(hash.split('=')[1], 10);
-                } else {
-                    number = 0;
-                }
-                // get the parent nav and data lists
-                var parentNavList = grandpa.querySelectorAll(options.nav + '>li');
-                var parentDataList = grandpa.querySelectorAll(options.data + '>li');
-                // clear active class of all nav elements and give it to the target one
-                for (var e = 0; e < parentNavList.length; e++) {
-                    if (e === number) {
-                        addClass(parentNavList[e], options.activeClass);
-                    } else {
-                        removeClass(parentNavList[e], options.activeClass);
+        tabSwiper: function (options, hashArray) {
+            // loop through all hash parameters (every second item)
+            for (a = 0; a < hashArray.length; a += 2) {
+                // set the parameter and value
+                var parameter = hashArray[a];
+                var value = hashArray[a + 1];
+                var tabName = '';
+                console.log(parameter, value);
+                // check if hashlink exists in nav element                
+                if (document.querySelectorAll('.' + options.classNav + ' a[href="#' + parameter + '=' + value + '"]').length > 0) {
+                    // get the current tabber nav and data lists
+                    var tabberNavList = document.querySelectorAll('.' + options.classNav + '[' + options.dataId + '="' + parameter + '"]' + '>li');
+                    var tabberDataList = document.querySelectorAll('.' + options.classData + '[' + options.dataId + '="' + parameter + '"]' + '>li');
+                    // clear active class of all nav elements and give it to the target one
+                    for (var b = 0; b < tabberNavList.length; b++) {
+                        // set current item name to loop index
+                        // or custom -pair name if given
+                        tabName = String(b);
+                        if (tabberNavList[b].getAttribute(options.dataPair)) {
+                            tabName = tabberNavList[b].getAttribute(options.dataPair);
+                        }
+                        // change classes
+                        if (tabName === value) {
+                            addClass(tabberNavList[b], options.classActive);
+                        } else {
+                            removeClass(tabberNavList[b], options.classActive);
+                        }
+                    }
+                    // clear active class of all data elements and give it to the target one
+                    for (var c = 0; c < tabberDataList.length; c++) {
+                        // set current item name to loop index
+                        // or custom -pair name if given
+                        tabName = String(c);
+                        if (tabberDataList[c].getAttribute(options.dataPair)) {
+                            tabName = tabberDataList[c].getAttribute(options.dataPair);
+                        }
+                        // change classes
+                        if (tabName === value) {
+                            addClass(tabberDataList[c], options.classActive);
+                        } else {
+                            removeClass(tabberDataList[c], options.classActive);
+                        }
                     }
                 }
-                // clear active class of all data elements and give it to the target one
-                for (var f = 0; f < parentDataList.length; f++) {
-                    if (f === number) {
-                        addClass(parentDataList[f], options.activeClass);
-                    } else {
-                        removeClass(parentDataList[f], options.activeClass);
-                    }
-                }
-                return true;
-            } else {
-                return false;
             }
+            return true;
         },
     };
     this.run = function () {

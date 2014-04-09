@@ -1,15 +1,19 @@
 - name: Baruch Spinoza
+  slug: spinoza
   url: http://en.wikipedia.org/wiki/Baruch_Spinoza
   description: "Baruch Spinoza (/bəˈruːk spɪˈnoʊzə/; born Benedito de Espinosa; 24 November 1632 – 21 February 1677) — later Benedict de Spinoza — was a Dutch philosopher. The breadth and importance of Spinoza's work was not fully realized until years after his death. By laying the groundwork for the 18th century Enlightenment and modern biblical criticism, including modern conceptions of the self and, arguably, the universe, he came to be considered one of the great rationalists of 17th-century philosophy. His magnum opus, the posthumous Ethics, in which he opposed Descartes's mind–body dualism, has earned him recognition as one of Western philosophy's most important thinkers. In the Ethics, \"Spinoza wrote the last indisputable Latin masterpiece, and one in which the refined conceptions of medieval philosophy are finally turned against themselves and destroyed entirely.\" Philosopher Georg Wilhelm Friedrich Hegel said of all contemporary philosophers, \"You are either a Spinozist or not a philosopher at all.\""
 
 - name: Socrates
+  slug: socrates
   url: http://en.wikipedia.org/wiki/Socrates
   description: "Socrates (/ˈsɒkrətiːz/;[2] Greek: Σωκράτης, Ancient Greek pronunciation: [sɔːkrátɛːs], Sōkrátēs; 470/469 BC – 399 BC) was a classical Greek (Athenian) philosopher. Credited as one of the founders of Western philosophy, he is an enigmatic figure known chiefly through the accounts of later classical writers, especially the writings of his students Plato and Xenophon and the plays of his contemporary Aristophanes. Many would claim that Plato's dialogues are the most comprehensive accounts of Socrates to survive from antiquity."
 
 - name: Friedrich Nietzsche
+  slug: nietzsche
   url: http://en.wikipedia.org/wiki/Friedrich_Nietzsche
   description: "Friedrich Wilhelm Nietzsche (/ˈniːtʃə/ or /ˈnitʃi/; German: [ˈfʁiːdʁɪç ˈvɪlhɛlm ˈniːt͡sʃə]; 15 October 1844 – 25 August 1900) was a German philologist, philosopher, cultural critic, poet and composer. He wrote several critical texts on religion, morality, contemporary culture, philosophy and science, displaying a fondness for metaphor, irony and aphorism."
 
 - name: Marquis de Sade
+  slug: desade
   url: http://en.wikipedia.org/wiki/Marquis_de_Sade
   description: "Donatien Alphonse François de Sade (2 June 1740 – 2 December 1814), better known as the Marquis de Sade (French: [maʁki də sad]), was a French aristocrat, revolutionary politician, philosopher and writer, famous for his libertine sexuality. His works include novels, short stories, plays, dialogues and political tracts; in his lifetime some were published under his own name, while others appeared anonymously and Sade denied being their author. He is best known for his erotic works, which combined philosophical discourse with pornography, depicting sexual fantasies with an emphasis on violence, criminality and blasphemy against the Catholic Church. He was a proponent of extreme freedom, unrestrained by morality, religion or law. The words \"sadism\" and \"sadist\" are derived from his name."

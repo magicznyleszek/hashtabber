@@ -17,6 +17,7 @@ layout: default
     <li>Vanilla JavaScript</li>
     <li>SCSS stylesheet</li>
     <li>Switching tabs via outside #links</li>
+    <li>Multiple simultaneous hashTabbers</li>
     <li>
         Tested and working on those browsers:
         <ul>
@@ -85,11 +86,11 @@ layout: default
 
 <p>Below is an example with basic theming applied. Notice that you could use a <a href="#dinosaurs=1">#dinosaurs=1</a> link to change the tab.</p>
 
-{% include examples/hashTabber-example-sandstone.liquid %}
+<section class="example">{% include examples/hashTabber-example-sandstone.liquid %}</section>
 
 <p>This is a naked (unthemed) script in work:</p>
 
-{% include examples/hashTabber-example-naked.liquid %}
+<section class="example">{% include examples/hashTabber-example-naked.liquid %}</section>
 
 
 <h2>License<a href="#menu-license" name="menu-license"> <small><i class="fa fa-link"></i></small></a></h2>
