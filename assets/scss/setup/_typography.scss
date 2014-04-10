@@ -21,7 +21,7 @@ a {
     }
 }
 
-p a {
+p a, ol a, ul a, blockquote a {
     border-bottom: 0.125rem solid $crimson;
     &:hover {
         border-color: transparent;

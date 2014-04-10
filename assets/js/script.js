@@ -6,7 +6,7 @@ function projectInterface() {
 
     this.run = run;
     function run() {
-        var tabber = new hashTabber();
+        var tabber = new HashTabber();
         tabber.run();
     }
 

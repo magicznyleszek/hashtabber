@@ -4,7 +4,7 @@
 // License CC0 1.0
 // --------------------------------------------------
 
-function hashTabber(customOptions) {
+function HashTabber(customOptions) {
     this.options = {
         classActive: 'active',
         classData: 'hashTabber-data',
@@ -94,7 +94,6 @@ function hashTabber(customOptions) {
                 var parameter = hashArray[a];
                 var value = hashArray[a + 1];
                 var tabName = '';
-                console.log(parameter, value);
                 // check if hashlink exists in nav element                
                 if (document.querySelectorAll('.' + options.classNav + ' a[href="#' + parameter + '=' + value + '"]').length > 0) {
                     // get the current tabber nav and data lists
