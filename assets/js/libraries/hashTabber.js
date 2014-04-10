@@ -60,8 +60,6 @@ function HashTabber(customOptions) {
             return outcome;
         },
         idsGiver: function (options) {
-            // loop through every instance of hashTabber (nav)
-            var tabbers = document.querySelectorAll('.' + options.classNav);
             var a, b, c, d;
             var tabberId;
             var tabberDefault;
@@ -69,6 +67,8 @@ function HashTabber(customOptions) {
             var navList;
             var navLiChildren;
             var dataList;
+            var tabbers = document.querySelectorAll('.' + options.classNav);
+            // loop through every instance of hashTabber (nav)
             for (a = 0; a < tabbers.length; a += 1) {
                 // get current tabber id and default tab
                 tabberId = tabbers[a].getAttribute(options.dataId);
