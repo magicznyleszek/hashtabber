@@ -87,10 +87,11 @@ function HashTabber(customOptions) {
                     if (navList[b].getAttribute(options.dataPair)) {
                         tabName = navList[b].getAttribute(options.dataPair);
                     }
-                    // add #link to first a element in tab
+                    // loop through all child nodes of li
+                    // check for the first a node and add #link to it
                     navLiChildren = navList[b].childNodes;
                     for (c = 0; c < navLiChildren.length; c += 1) {
-                        if (navLiChildren[c].localName === 'a') {
+                        if (navLiChildren[c].nodeName === 'A') {
                             navLiChildren[c].setAttribute('href', '#' + tabberId + '=' + tabName);
                         }
                     }

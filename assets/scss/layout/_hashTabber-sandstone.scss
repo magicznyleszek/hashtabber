@@ -60,18 +60,9 @@ ol.hashTabber-data.hashTabber-sandstone {
     border-bottom: 0.125rem solid $sandstoneLight;
     min-height: rem(400px);
     > li {
-        @include opacity(0);
-        visibility: hidden;
-        height: 0;
-        overflow: hidden;
         h3 {
             padding-bottom: 0.5rem;
             border-bottom: 0.125rem solid $sandstoneLighter;
-        }
-        &.active {
-            @include opacity(1);
-            visibility: visible;
-            height: auto;
         }
     }
 }
