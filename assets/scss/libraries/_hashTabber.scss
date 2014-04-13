@@ -13,15 +13,8 @@ ol.hashTabber-nav, ol.hashTabber-data {
 ol.hashTabber-data {
     > li {
         display: none;
-        // @include opacity(0);
-        // visibility: hidden;
-        // height: 0;
-        // overflow: hidden;
         &.active {
             display: block;
-            // @include opacity(1);
-            // visibility: visible;
-            // height: auto;
         }
     }
 }

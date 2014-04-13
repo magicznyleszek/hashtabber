@@ -1,0 +1,53 @@
+body {
+    min-height: 100%;
+    padding: 1rem;
+}
+
+a {
+    color: $crimson;
+    outline: none;
+    text-decoration: none;
+    &:visited {
+        color: $crimson;
+    }
+    &:hover {
+        color: $crimsonLight;
+    }
+}
+
+p a, ol a, ul a, blockquote a {
+    border-bottom: 0.125rem solid $crimson;
+    &:hover {
+        border-color: transparent;
+    }
+}
+
+nav ul, nav ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+:focus {
+    outline-color: $crimson;
+    outline-style: auto;
+    outline-width: 0.25rem;
+}
+
+::-moz-focus-inner {
+    border: 0;
+}
+
+img, embed, object, video {
+    max-width: 100%;
+}
+
+::selection {
+    color: $white;
+    background-color: $crimson;
+}
+
+::-moz-selection {
+    color: $white;
+    background-color: $crimson;
+}

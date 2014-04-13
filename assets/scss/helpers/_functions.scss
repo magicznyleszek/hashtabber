@@ -1,0 +1,25 @@
+// --------------------------------------------------
+// function to strip units from value
+// --------------------------------------------------
+
+@function parseInt($n) {
+    @return $n / ($n * 0 + 1);
+}
+
+
+// --------------------------------------------------
+// function for converting to rem value
+// uses $baseFontSize
+// --------------------------------------------------
+
+@function rem($value) {
+    $root: parseInt($baseFontSize);
+    $val: parseInt($value);
+    $return: ();
+    @if unit($value) == "px" {
+        $return: append($return, ($val / $root + rem));
+    } @else {
+        $return: append($return, ($val * $root + px));
+    }
+    @return $return;
+}

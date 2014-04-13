@@ -1,0 +1,122 @@
+html {
+    font: 400 #{$baseFontSize}/#{$baseLineHeight} $baseFontFamily;
+    @media screen and (min-width: #{$breakBig}) {
+        font-size: $fontSizeBig;
+    }
+    @media screen and (max-width: #{$breakSmall}) {
+        font-size: $fontSizeSmall;
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+    &:not(:first-child) {
+        margin-top: 3rem;
+    }
+    a, a:hover {
+        text-decoration: none;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    &.page-title {
+        font-size: 4.5rem;
+        font-weight: 700;
+        padding: 3rem 0 4.5rem;
+        letter-spacing: -0.125rem;
+        color: $crimson;
+        @include text-shadow($crimsonDark 0 0.125rem 0);
+        @media screen and (max-width: #{$breakSmall}) {
+            font-size: 3rem;
+            @include text-shadow($crimsonDark 0 0.0625rem 0);
+        }
+    }
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p, pre, section.example {
+    &:not(:first-child) {
+        margin-top: $baseLineHeight * 1rem;
+    }
+}
+
+blockquote {
+    
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+code {
+    font-family: $code;
+    font-size: 0.75rem;
+    background-color: $sandstoneLighter;
+    border: 0.0625rem solid $sandstoneLight;
+    padding: 0 0.125rem;
+    @include border-radius(0.25rem);
+}
+
+pre {
+    code {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        @include box-sizing(border-box);
+        padding: 0.5rem;
+    }
+}
+
+small, sub, sup {
+    font-size: 75%;
+}
+
+sub, sup {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+hr {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: $black;
+}
