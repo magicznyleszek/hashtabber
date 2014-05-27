@@ -12,6 +12,10 @@ ol.hashTabber-nav.hashTabber-sandstone, ol.hashTabber-data.hashTabber-sandstone 
 
 ol.hashTabber-nav.hashTabber-sandstone {
     @include column(1,5);
+    @media screen and (max-width: #{$breakSmall}) {
+        @include column();
+        margin-bottom: 0.75rem;
+    }
     > h2 {
         font-size: 0.875rem;
         text-transform: uppercase;
@@ -48,6 +52,9 @@ ol.hashTabber-nav.hashTabber-sandstone {
                 background-color: $sandstoneDark;
                 border-color: $sandstoneDarker;
             }
+            @media screen and (max-width: #{$breakSmall}) {
+                @include border-radius(0.25rem);
+            }
         }
     }
 }
@@ -59,6 +66,9 @@ ol.hashTabber-data.hashTabber-sandstone {
     padding: 1rem 1.5rem 1.5rem 1rem;
     border-bottom: 0.125rem solid $sandstoneLight;
     min-height: rem(400px);
+    @media screen and (max-width: #{$breakSmall}) {
+        @include column();
+    }
     > li {
         h3 {
             padding-bottom: 0.5rem;
