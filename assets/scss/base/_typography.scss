@@ -1,5 +1,6 @@
 html {
     font: 400 #{$baseFontSize}/#{$baseLineHeight} $baseFontFamily;
+    color: $sandstoneDarker;
     @media screen and (min-width: #{$breakBig}) {
         font-size: $fontSizeBig;
     }
@@ -31,6 +32,24 @@ h1 {
         @media screen and (max-width: #{$breakSmall}) {
             font-size: 3rem;
             @include text-shadow($crimsonDark 0 0.0625rem 0);
+        }
+    }
+}
+
+a.page-logo {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    svg {
+        max-height: 100%;
+        path {
+            fill: $crimson;
+        }
+    }
+    &:hover {
+        svg path {
+            fill: $crimsonLight;
         }
     }
 }
