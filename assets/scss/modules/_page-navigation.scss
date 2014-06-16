@@ -22,26 +22,26 @@ nav.page-main-navigation {
                 width: 10rem;
             }
             &:last-child a {
-                border-bottom: 0.125rem solid $crimsonDark;
+                border-bottom: 0.125rem solid $jadeDark;
                 @include border-radius(0 0 0 0.25rem);
             }
         }
     }
     a {
         color: $white;
-        background-color: $crimson;
+        background-color: $jade;
         line-height: 2rem;
         padding: 0 0.5rem;
         display: block;
         text-decoration: none;
         text-align: left;
         &:hover {
-            background-color: $crimsonLight;
+            background-color: $jadeLight;
         }
     }
     a.close, a.open {
         @include absolute(top 0 right 0);
-        border-bottom: 0.125rem solid $crimsonDark;
+        border-bottom: 0.125rem solid $jadeDark;
         @include border-radius(0 0 0 0.25rem);
     }
     a.close {

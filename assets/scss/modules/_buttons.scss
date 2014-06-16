@@ -1,15 +1,15 @@
 a.fake-button {
     color: $white;
-    background-color: $crimson;
+    background-color: $jade;
     line-height: 2rem;
     padding: 0 0.5rem;
     display: inline-block;
     text-decoration: none;
-    border-bottom: 0.125rem solid $crimsonDark;
+    border-bottom: 0.125rem solid $jadeDark;
     @include border-radius(0.25rem);
     &:hover {
-        background-color: $crimsonLight;
-        border-color: $crimsonDark;
+        background-color: $jadeLight;
+        border-color: $jadeDark;
     }
     &.fake-button-big {
         font-size: 1.5rem;

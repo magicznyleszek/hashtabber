@@ -4,19 +4,19 @@ body {
 }
 
 a {
-    color: $crimson;
+    color: $jade;
     outline: none;
     text-decoration: none;
     &:visited {
-        color: $crimson;
+        color: $jade;
     }
     &:hover {
-        color: $crimsonLight;
+        color: $jadeLight;
     }
 }
 
 p a, ol a, ul a, blockquote a {
-    border-bottom: 0.125rem solid $crimson;
+    border-bottom: 0.125rem solid $jade;
     &:hover {
         border-color: transparent;
     }
@@ -29,7 +29,7 @@ nav ul, nav ol {
 }
 
 :focus {
-    outline-color: $crimson;
+    outline-color: $jade;
     outline-style: auto;
     outline-width: 0.25rem;
 }
@@ -44,10 +44,10 @@ img, embed, object, video {
 
 ::selection {
     color: $white;
-    background-color: $crimson;
+    background-color: $jade;
 }
 
 ::-moz-selection {
     color: $white;
-    background-color: $crimson;
+    background-color: $jade;
 }

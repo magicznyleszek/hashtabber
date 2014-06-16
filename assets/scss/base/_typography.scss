@@ -27,11 +27,11 @@ h1 {
         font-weight: 700;
         padding: 3rem 0 4.5rem;
         letter-spacing: -0.125rem;
-        color: $crimson;
-        @include text-shadow($crimsonDark 0 0.125rem 0);
+        color: $jade;
+        @include text-shadow($jadeDark 0 0.125rem 0);
         @media screen and (max-width: #{$breakSmall}) {
             font-size: 3rem;
-            @include text-shadow($crimsonDark 0 0.0625rem 0);
+            @include text-shadow($jadeDark 0 0.0625rem 0);
         }
     }
 }
@@ -44,12 +44,12 @@ a.page-logo {
     svg {
         max-height: 100%;
         path {
-            fill: $crimson;
+            fill: $jade;
         }
     }
     &:hover {
         svg path {
-            fill: $crimsonLight;
+            fill: $jadeLight;
         }
     }
 }
