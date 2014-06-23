@@ -1,5 +1,5 @@
 # description
-name: "hashTabber"
+name: "HashTabber"
 description: "A simple JavaScript plugin for hashchange-driven tabbed navigation"
 keywords: "vanilla, javascript, plugin, hashchange, tab, navigation"
 author: "Leszek Pietrzak"
