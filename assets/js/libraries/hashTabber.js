@@ -1,5 +1,5 @@
 // --------------------------------------------------
-// HashTabber v2.1 by smutnyleszek@gmail.com
+// HashTabber v2.2 by smutnyleszek@gmail.com
 // http://hashtabber.smutnyleszek.com
 // License CC0 1.0
 // --------------------------------------------------
@@ -130,8 +130,8 @@ function HashTabber(customOptions) {
                 parameter = hashArray[a];
                 value = hashArray[a + 1];
                 tabName = '';
-                // check if hashlink exists in nav element                
-                if (document.querySelectorAll('.' + options.classNav + ' a[href="#' + parameter + '=' + value + '"]').length > 0) {
+                // check if hashlink exists in nav element
+                if (document.querySelectorAll('.' + options.classNav + ' a[href*="#' + parameter + '=' + value + '"]').length > 0) {
                     // get the current tabber nav and data lists
                     tabberNavList = document.querySelectorAll('.' + options.classNav + '[' + options.dataId + '="' + parameter + '"]' + '>li');
                     tabberDataList = document.querySelectorAll('.' + options.classData + '[' + options.dataId + '="' + parameter + '"]' + '>li');
