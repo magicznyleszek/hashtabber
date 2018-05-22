@@ -5,7 +5,7 @@ keywords: "vanilla, javascript, plugin, hashchange, tab, navigation"
 author: "Leszek Pietrzak"
 
 # address settings
-baseurl: http://hashtabber.smutnyleszek.com
+baseurl: http://hashtabber.magicznyleszek.xyz
 permalink: /post/:title
 
 # site configuration

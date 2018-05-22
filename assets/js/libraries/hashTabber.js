@@ -1,6 +1,6 @@
 // --------------------------------------------------
-// HashTabber v2.2 by smutnyleszek@gmail.com
-// http://hashtabber.smutnyleszek.com
+// HashTabber v2.2 by leszek@magicznyleszek.xyz
+// http://hashtabber.magicznyleszek.xyz
 // License CC0 1.0
 // --------------------------------------------------
 
