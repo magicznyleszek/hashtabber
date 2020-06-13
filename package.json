@@ -1,0 +1,27 @@
+{
+  "name": "hashtabber",
+  "version": "2.2.0",
+  "description": "This is a simple JavaScript plugin for hashchange-driven tabbed navigation system. I was constantly in need of those, so I finally made a kinda-plugin.",
+  "main": "assets/js/libraries/hashTabber.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicznyleszek/hashtabber.git"
+  },
+  "keywords": [
+    "navigation",
+    "Javascript",
+    "tab",
+    "tabs",
+    "hash",
+    "js"
+  ],
+  "author": "Leszek Pietrzak <leszek@magicznyleszek.xyz>",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/magicznyleszek/hashtabber/issues"
+  },
+  "homepage": "http://hashtabber.magicznyleszek.xyz/"
+}
